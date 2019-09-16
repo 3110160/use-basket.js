@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[0],[function(n,o,c){n.exports=c(1)},function(n,o,c){"use strict";c.r(o),c.d(o,"getlocal",(function(){return t}));const t=()=>{console.log(1)}}],[[0,1]]]);

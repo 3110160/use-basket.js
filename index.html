@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>test</title>
+    <% if(process.env.NODE_ENV=='production') {%>
+    <script src="/lib/basket.full.min.js"></script>
+    <script src="/lib/localforage.min.js"></script>
+    <%}%>
+  </head>
+
+  <body>
+    <script>
+      var files = {
+        publicPath: "",
+        chunks: {
+          runtime: {
+            size: 0,
+            entry: "js/runtime.2b3c3.bound.js",
+            hash: "574abaa6a7ff05980f06",
+            css: []
+          },
+          main: {
+            size: 48,
+            entry: "js/main.d234e.bound.js",
+            hash: "71d26d95b048f064a117",
+            css: []
+          }
+        },
+        js: ["js/runtime.2b3c3.bound.js", "js/main.d234e.bound.js"],
+        css: []
+      };
+      var chunks = files.chunks;
+      localforage.setDriver(localforage.LOCALSTORAGE);
+      for (var chunk in chunks) {
+        // 检验当前local里面是否有
+        localforage
+          .getItem(`localforage/${chunk}`)
+          .then(function(value) {
+            if (value && value !== `basket-${chunks[chunk].entry}`) {
+              localforage.removeItem(`basket-${value}`).then(function() {
+                // 当值被移除后，此处代码运行
+                localforage.setItem(chunk, chunks[chunk]["hash"]);
+              });
+            } else {
+              localforage.setItem(chunk, chunks[chunk]["hash"]);
+            }
+          })
+          .catch(function(err) {
+            console.log(err);
+          });
+        basket.require({ url: chunks[chunk].entry, execute: true });
+      }
+    </script>
+    <div id="app">wwww</div>
+  </body>
+</html>

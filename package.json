@@ -22,7 +22,9 @@
     "basket.js": "^0.5.2"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^5.0.4",
     "html-webpack-plugin": "^3.2.0",
+    "localforage": "^1.7.3",
     "webpack": "^4.40.2",
     "webpack-cli": "^3.3.8",
     "webpack-manifest-plugin": "^2.0.4"

@@ -1,3 +1,1 @@
-export const getlocal = ()=>{
-    console.log(1);
-}
+console.log(324341)

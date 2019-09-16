@@ -1,19 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>test</title>
-</head>
-
-<body>
-    <script>
-        console.log( {"files":{"publicPath":"","chunks":{"runtime":{"size":0,"entry":"runtime.2b3c3.bound.js","hash":"574abaa6a7ff05980f06","css":[]},"main":{"size":79,"entry":"main.88b5f.bound.js","hash":"b975a1c2e479842346be","css":[]}},"js":["runtime.2b3c3.bound.js","main.88b5f.bound.js"],"css":[]},"options":{"template":"/Users/mac/use-basket.js/node_modules/html-webpack-plugin/lib/loader.js!/Users/mac/use-basket.js/index.ejs","filename":"index.html","hash":false,"inject":true,"compile":true,"favicon":false,"minify":false,"cache":true,"showErrors":true,"chunks":"all","excludeChunks":[],"chunksSortMode":"auto","meta":{},"title":"Webpack App","xhtml":false}} )
-    </script>
-
-    <div id="app">wwww</div>
-<script type="text/javascript" src="runtime.2b3c3.bound.js"></script><script type="text/javascript" src="main.88b5f.bound.js"></script></body>
-
-</html>
+Html Webpack Plugin:
+<pre>
+  ReferenceError: chunk is not defined
+  
+  - index.html:100 
+    /Users/apple/use-basket.js/index.html:100:10
+  
+  - index.html:107 module.exports
+    /Users/apple/use-basket.js/index.html:107:3
+  
+  - index.js:284 Promise.resolve.then
+    [use-basket.js]/[html-webpack-plugin]/index.js:284:18
+  
+</pre>

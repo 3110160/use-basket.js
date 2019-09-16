@@ -1,5 +1,7 @@
 {
-  "main.js": "main.88b5f.bound.js",
-  "runtime.js": "runtime.2b3c3.bound.js",
-  "index.html": "index.html"
+  "main.js": "js/main.d234e.bound.js",
+  "runtime.js": "js/runtime.2b3c3.bound.js",
+  "index.html": "index.html",
+  "lib/basket.full.min.js": "lib/basket.full.min.js",
+  "lib/localforage.min.js": "lib/localforage.min.js"
 }
