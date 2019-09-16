@@ -1,0 +1,30 @@
+{
+  "name": "use-basket.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --env.mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3110160/use-basket.js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3110160/use-basket.js/issues"
+  },
+  "homepage": "https://github.com/3110160/use-basket.js#readme",
+  "dependencies": {
+    "basket.js": "^0.5.2"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.8",
+    "webpack-manifest-plugin": "^2.0.4"
+  }
+}
